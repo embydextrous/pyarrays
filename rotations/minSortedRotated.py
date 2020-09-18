@@ -2,6 +2,13 @@ def findMinimumElement(a):
     pivot = findPivot(a, 0, len(a) - 1)
     return a[pivot + 1]
 
+def findMaximumElement(a):
+    n = len(a)
+    pivot = findPivot(a, 0, n - 1)
+    if pivot == -1:
+        return a[n-1]
+    return a[pivot]
+
 def findPivot(a, l, r):
     if l > r:
         return -1
@@ -18,3 +25,4 @@ a = [1, 2, 3, 4, 5, 6, 7, 8]
 print findMinimumElement(a)
 a = [6, 7, 8, 1, 2, 3, 4, 5]
 print findMinimumElement(a)
+print findMaximumElement(a)
