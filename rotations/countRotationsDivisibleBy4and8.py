@@ -18,6 +18,17 @@ def rotationsDivisibleBy8(n):
             count += 1
     return count
 
+def rotationsDivisibleBy10(n):
+    count = 0
+    while n > 0:
+        if n % 10 == 0:
+            count += 1
+        n /= 10
+    return count
+
 n = 43292816
 print rotationsDivisibleBy4(n)
 print rotationsDivisibleBy8(n)
+
+q = 102303404
+print rotationsDivisibleBy10(q)
